@@ -6,7 +6,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "Pilar",
+  "author": "Pilar Del Rosario Rodriguez Campos",
   "license": "ISC",
   "description": "",
   "dependencies": {
