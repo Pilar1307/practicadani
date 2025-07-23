@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const palapaController=require('../controllers/palapaController')
 
-router.get('/bebidas', (req, res)=>{
-    res.json({mensaje: "hola mundo"});
-})
 
-module .exports = router;
+router.get('/bebidas', palapaController.buscartodo)
+.post('/bebidas', palapaController.agregar)
+.get('/bebidas/:key/:value',palapaController.buscarbebida, palapaController.mostrarbebida)
+.delete('/bebidas/:key/:value',palapaController.buscarbebida, palapaController.eliminarbebida)
+.put('/bebidas/:key/:value',palapaController.buscarbebida, palapaController.actualizarbebida)
+module.exports = router;
